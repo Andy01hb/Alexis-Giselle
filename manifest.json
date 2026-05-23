@@ -1,0 +1,17 @@
+{
+  "name": "Alexis & Yissel",
+  "short_name": "Nuestro Amor",
+  "description": "Un regalo de amor de Alexis para Yissel.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d0508",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
