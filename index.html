@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexis & Giselle — Nuestro Amor</title>
+  <meta name="description" content="Un regalo de amor de Alexis para Giselle, en nuestro aniversario especial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Italiana&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ AUDIO ░░ -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="canción Alexis Giselle.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ░░ MUSIC TOGGLE ░░ -->
+  <button id="music-btn" aria-label="Activar música" title="Música">
+    <svg id="music-icon-on" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+    </svg>
+    <svg id="music-icon-off" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display:none">
+      <path d="M4.27 3L3 4.27l9 9V17a4 4 0 1 0 2 3.46V15.27l5.73 5.73L21 19.73 4.27 3zM14 7h4V3h-6v5.18l2 2V7z"/>
+    </svg>
+  </button>
+
+  <!-- ░░ ANIMATED BACKGROUND ░░ -->
+  <div id="bg-layer" aria-hidden="true">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-4"></div>
+    <div class="bg-orb orb-5"></div>
+    <div class="bg-orb orb-6"></div>
+    <div class="bg-aurora"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- ░░ PARTICLES CANVAS ░░ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Con todo mi amor ✦</p>
+      <h1 class="hero-title">
+        <span class="name-a">Alexis</span>
+        <span class="hero-ampersand">&amp;</span>
+        <span class="name-b">Giselle</span>
+      </h1>
+      <p class="hero-subtitle">Un año lleno de momentos que siempre guardaré en mi corazón</p>
+      <div class="hero-divider">
+        <span></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span></span>
+      </div>
+      <a href="#moments" class="hero-cta" id="hero-cta-btn">Descubrir nuestros momentos</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ░░ INTRO LETTER ░░ -->
+  <section id="intro-letter">
+    <div class="letter-container reveal">
+      <div class="letter-stamp">💌</div>
+      <h2 class="letter-title">Para la persona que ilumina mis días</h2>
+      <p class="letter-body">
+        Hay personas que llegan a tu vida y la transforman para siempre. Tú eres esa persona para mí.
+        Cada momento contigo tiene un sabor especial, una textura única que no encuentro en ningún otro lugar.
+        Este pequeño rincón digital es para ti — una colección de los momentos que nos han hecho ser lo que somos,
+        de las risas que nos hemos robado, de los besos que le hemos regalado al mundo sin pena.
+      </p>
+      <p class="letter-body">
+        Gracias por elegirme. Gracias por quedarte. Gracias por ser tú, exactamente como eres.
+      </p>
+      <p class="letter-sign">Con todo mi amor, <em>Alexis</em></p>
+    </div>
+  </section>
+
+  <!-- ░░ MOMENTS GALLERY ░░ -->
+  <section id="moments">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Nuestra historia</p>
+      <h2 class="section-title">Los momentos que nos definen</h2>
+    </div>
+
+    <div class="moments-grid">
+
+      <!-- Card 1 -->
+      <article class="moment-card tilt-card reveal from-bottom" id="card-proposal-setup" data-delay="0">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="te pedí que fueras mi novia, lo mejor que pude aver hecho en mi vida.  todo el tiempo estuve organizando la pedida tanto así que dejé a mis amigos terminando los detalles finales por irme ya c.png"
+            alt="La pedida de noviazgo"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">El principio de todo</span>
+          <h3 class="card-title">«¿Quieres ser mi novia?»</h3>
+          <p class="card-text">
+            Te pedí que fueras mi novia — lo mejor que pude haber hecho en mi vida.
+            Estuve organizando cada detalle durante tanto tiempo, tan emocionado, que terminé dejando
+            a mis amigos arreglando los últimos detalles mientras yo ya corría hacia ti.
+            Porque cuando se trata de tú, la espera siempre se vuelve imposible.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="moment-card tilt-card reveal from-right card-tall" id="card-sitting-flowers" data-delay="100">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Imagen sentados con flores el mismo día de la pedida de noviazgo.jpg"
+            alt="Sentados con flores el día de la pedida de noviazgo"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Ese día tan especial</span>
+          <h3 class="card-title">Flores y un sí que lo cambió todo</h3>
+          <p class="card-text">
+            Ese mismo día, sentados entre flores, con el corazón todavía latiendo fuerte,
+            supe que ese momento quedaría grabado en mí para siempre.
+            Hay días que simplemente sabes que serán los que recuerdas cuando seas viejo —
+            ese fue uno de ellos.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="moment-card tilt-card reveal from-left" id="card-childhood" data-delay="150">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Imagen editada donde ambos son niños y ella le pide noviazgo a el.jpg"
+            alt="Imagen editada de ambos de niños"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">El destino tenía un plan</span>
+          <h3 class="card-title">Como si siempre fuera a ser así</h3>
+          <p class="card-text">
+            A veces me gusta imaginar que incluso de niños nos hubiésemos encontrado —
+            que tú habrías sido la valiente que da el primer paso,
+            porque así eres tú: auténtica, sin miedo, llena de ese carácter que tanto me fascina.
+            Como si el universo nos tuviera destinados desde antes de que supiéramos la diferencia.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="moment-card tilt-card reveal from-right" id="card-passion" data-delay="200">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Esta foto me gusta mucho por qué siento que expresa a la perfección como es nuestra relacion, apasionada, intensa, amorosa, que lo damos todo siempre y que siempre nos demostramos amor lo más importante..jpg"
+            alt="Foto que expresa nuestra relación apasionada"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Nosotros al cien por ciento</span>
+          <h3 class="card-title">Apasionados, intensos y completamente nuestros</h3>
+          <p class="card-text">
+            Esta foto me gusta muchísimo porque siento que captura perfectamente lo que somos:
+            apasionados, intensos, amorosos — dos personas que se lo dan todo sin reservas.
+            Porque en nuestra relación, el amor nunca se guarda para después;
+            siempre se demuestra en el momento preciso. Eso somos. Eso seremos.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 5 – Cowboy Party Wide -->
+      <article class="moment-card tilt-card reveal from-bottom card-wide" id="card-cowboy" data-delay="250">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Fiesta vaquera con beso vaquero también muy apasionados demostrando nuestro amor al mundo jajajaja.jpg"
+            alt="Fiesta vaquera besándonos"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Sin pena ni filtros</span>
+          <h3 class="card-title">Beso vaquero para el mundo entero</h3>
+          <p class="card-text">
+            Fiesta vaquera, ambiente festivo y nosotros demostrándole al mundo que el amor no necesita
+            esconderse en ningún rincón. Completamente apasionados, completamente nosotros,
+            completamente sin vergüenza — como siempre ha de ser. jajajaja.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 6 – Cinema -->
+      <article class="moment-card tilt-card reveal from-left" id="card-cinema" data-delay="300">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Cómo olvidar nuestras idas al cine, tanto que nos encanta ir que siento que ya es parte de nosotros o de nuestra relación, desde los inicios siempre nos encantaba ir y hasta la fecha.png"
+            alt="Nuestras idas al cine"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Nuestra tradición favorita</span>
+          <h3 class="card-title">El cine, nuestro lugar sagrado</h3>
+          <p class="card-text">
+            ¿Cómo olvidar nuestras idas al cine? Desde el principio siempre fue algo que ambos amábamos
+            y hasta hoy sigue siendo parte de nosotros. Ya no es solo una salida — es un ritual,
+            una forma de pausar el mundo y quedarnos solo los dos en esa oscuridad cómplice.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 7 – Sushi -->
+      <article class="moment-card tilt-card reveal from-right" id="card-sushi" data-delay="350">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Primera vez que fuimos a comer sushi, ese día te veías increíble súper bonita la vdd, por eso fue que te tomé esta foto y aparte para molestarte mientras comías tu sushi.png"
+            alt="Primera vez comiendo sushi"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Primera vez de muchas</span>
+          <h3 class="card-title">El sushi y tú, increíblemente bonita</h3>
+          <p class="card-text">
+            La primera vez que fuimos a comer sushi. Ese día te veías increíble —
+            tan bonita que no pude resistirme a tomarte esta foto.
+            Bueno, también fue para molestarte mientras comías, claro,
+            porque molestarte es una de mis formas favoritas de decirte que te quiero.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 8 – Birthday of her -->
+      <article class="moment-card tilt-card reveal from-left" id="card-birthday-her" data-delay="400">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Cumpleaños de la más bonita un momento muy feliz para ti y también para mi.jpg"
+            alt="Cumpleaños de Giselle"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Tu día especial</span>
+          <h3 class="card-title">El cumpleaños de la más bonita</h3>
+          <p class="card-text">
+            Tu cumpleaños — un momento de felicidad pura, tanto para ti como para mí.
+            Porque verte sonreír así, celebrar tu vida, saber que existes en este mundo...
+            eso me llena de una alegría que no sé explicar del todo,
+            pero que siento profundamente cada vez que estás conmigo.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 9 – Birthday of him (her at his party) -->
+      <article class="moment-card tilt-card reveal from-right" id="card-birthday-him" data-delay="450">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Cuando cumplí 20 añotes obviamente estando presente en el cumple de su hombre muy bien, te veías muy bonita ese día espectacular, (yo creo que ese fue mi regalo verte así).jpg"
+            alt="Ella en mi cumpleaños de 20"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Mis 20 añotes</span>
+          <h3 class="card-title">Mi mejor regalo eras tú</h3>
+          <p class="card-text">
+            Cuando cumplí 20, ahí estabas — presente en el cumpleaños de tu hombre como tiene que ser.
+            Te veías espectacularmente bonita ese día. Creo, sin exagerar,
+            que verte así fue el mejor regalo que pude recibir.
+            No necesité nada más.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 10 – Gym -->
+      <article class="moment-card tilt-card reveal from-bottom card-wide" id="card-gym" data-delay="500">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Me encanta que seas mi gym partner, haces que mis entrenamientos tengan sentido, que tengan emoción que tengan ese toque que solo tú das y que tanto me encanta..png"
+            alt="Gym partners"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Juntos en todo</span>
+          <h3 class="card-title">Mi gym partner favorita en el mundo</h3>
+          <p class="card-text">
+            Me encanta que seas mi compañera de gym. Haces que mis entrenamientos tengan sentido,
+            que tengan emoción, que tengan ese toque especial que solo tú sabes darle a cada cosa.
+            El esfuerzo se siente diferente cuando estás a mi lado — más ligero, más divertido, más nuestro.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 11 – Wild side -->
+      <article class="moment-card tilt-card reveal from-left" id="card-wild" data-delay="550">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Momento top cuando descubri tu animal interior, de mis fotos favoritas tuyas.jpg"
+            alt="Tu animal interior"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Momento épico</span>
+          <h3 class="card-title">Cuando descubrí tu animal interior</h3>
+          <p class="card-text">
+            Este es definitivamente uno de mis momentos favoritos contigo.
+            El día que descubrí ese lado tuyo tan espontáneo, tan libre, tan salvajemente tú.
+            Una de mis fotos favoritas de toda la vida — porque te captura exactamente como eres
+            cuando te dejas ser completamente libre.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+      <!-- Card 12 – Drinks -->
+      <article class="moment-card tilt-card reveal from-right" id="card-drinks" data-delay="600">
+        <div class="card-glow"></div>
+        <div class="card-image-wrap">
+          <img
+            src="Mi mala copa favorita haciendo de las suyas, momento de risa antes de alcoholizarnos (como siempre cuando tomamos).png"
+            alt="Momento de risas antes de los tragos"
+            loading="lazy"
+          />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <span class="card-tag">Nuestra energía caótica</span>
+          <h3 class="card-title">Mi mala copa favorita haciendo de las suyas</h3>
+          <p class="card-text">
+            Risas antes de los tragos, risas durante los tragos, risas después de los tragos.
+            Contigo el caos siempre termina siendo la mejor historia para contar.
+            Mi mala copa favorita — y el mejor plan de viernes que pude haber tenido nunca.
+          </p>
+          <div class="card-heart">♥</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ░░ TIMELINE ░░ -->
+  <section id="timeline">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Nuestra cronología</p>
+      <h2 class="section-title">Los capítulos de nuestra historia</h2>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item reveal" data-delay="0">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-tag">El principio</span>
+          <h3>La pedida</h3>
+          <p>Todo comenzó con una pregunta, mucho nerviosismo, flores y amigos que terminaron los detalles mientras yo ya corría hacia ti.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal tl-right" data-delay="100">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-tag">Tradición</span>
+          <h3>Las idas al cine</h3>
+          <p>Desde los primeros días, el cine se convirtió en nuestro ritual. Nuestra forma de decir "eres mi plan favorito".</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" data-delay="200">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-tag">Celebración</span>
+          <h3>Tu cumpleaños</h3>
+          <p>Ver tu sonrisa en tu día especial fue uno de esos momentos que se quedan para siempre. Tu felicidad siempre es la mía.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal tl-right" data-delay="300">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-tag">Salud y juntos</span>
+          <h3>Gym partners</h3>
+          <p>Convertiste mis entrenamientos en algo completamente diferente. El esfuerzo sabe mejor cuando estás a mi lado.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" data-delay="400">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-tag">Para siempre</span>
+          <h3>Hoy y siempre</h3>
+          <p>Cada momento, cada foto, cada risa y cada beso nos han llevado hasta aquí. Y aquí es exactamente donde quiero estar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FINAL LOVE LETTER ░░ -->
+  <section id="closing" data-confetti-trigger>
+    <!-- Canvas confetti will be injected by JS -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="closing-bg"></div>
+    <div class="closing-content reveal">
+      <div class="closing-hearts">
+        <span class="ch ch1">♥</span>
+        <span class="ch ch2">♥</span>
+        <span class="ch ch3">♥</span>
+      </div>
+
+      <!-- Anniversary banner -->
+      <div class="anniversary-banner" id="anniversary-banner">
+        <span class="ann-star">✦</span>
+        <span class="ann-text">Feliz Aniversario</span>
+        <span class="ann-star">✦</span>
+      </div>
+
+      <h2 class="closing-title">Gracias por ser tú</h2>
+      <p class="closing-body">
+        Giselle, si hay algo que sé con certeza es esto: elegirte a ti fue y seguirá siendo
+        la mejor decisión de mi vida. No hay una versión de mi historia que prefiera
+        sobre una que tenga tu nombre escrito en ella.
+      </p>
+      <p class="closing-body">
+        Este aniversario es un recordatorio de todo lo que hemos construido juntos —
+        de cada risa robada, de cada plan espontáneo, de cada momento en que simplemente
+        estamos los dos y eso es suficiente. Más que suficiente.
+      </p>
+      <p class="closing-final">
+        Te amo hoy, te amaré mañana, y seguiré eligiéndote todos los días que me queden.
+      </p>
+      <p class="closing-sign">— Alexis 🤍</p>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer id="footer">
+    <p>Hecho con todo el amor del mundo · Alexis para Giselle 🤍</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
